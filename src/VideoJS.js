@@ -8,7 +8,6 @@ export const VideoJS = (props) => {
   const { options, onReady } = props;
 
   React.useEffect(() => {
-    // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       const videoElement = videoRef.current;
 
@@ -18,9 +17,6 @@ export const VideoJS = (props) => {
         videojs.log("player is ready");
         onReady && onReady(player);
       }));
-
-      // You could update an existing player in the `else` block here
-      // on prop change, for example:
     } else {
       // const player = playerRef.current;
       // player.autoplay(options.autoplay);
@@ -28,7 +24,6 @@ export const VideoJS = (props) => {
     }
   }, [options, videoRef]);
 
-  // Dispose the Video.js player when the functional component unmounts
   React.useEffect(() => {
     const player = playerRef.current;
 

@@ -1,20 +1,17 @@
-import React from "react";
-
-// This imports the functional component from the previous sample.
+import { useRef } from "react";
 import VideoJS from "./VideoJS";
 
 const App = () => {
-  const playerRef = React.useRef(null);
+  const playerRef = useRef(null);
 
   const videoJsOptions = {
-    autoplay: true,
+    height: 400,
+    width: 600,
     controls: true,
-    responsive: true,
-    fluid: true,
     sources: [
       {
-        src: "/path/to/video.mp4",
-        type: "video/mp4",
+        src: "http://localhost:8083/stream/pattern/channel/0/hls/live/index.m3u8",
+        type: "application/x-mpegURL",
       },
     ],
   };
@@ -33,11 +30,10 @@ const App = () => {
   };
 
   return (
-    <>
-      <div>Rest of app here</div>
+    <div>
+      Hello World!
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-      <div>Rest of app here</div>
-    </>
+    </div>
   );
 };
 
