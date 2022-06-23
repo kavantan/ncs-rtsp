@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import videojs from "video.js";
 import VideoJS from "./VideoJS";
 
 const App = () => {
