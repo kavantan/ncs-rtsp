@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import videojs from "video.js";
 import VideoJS from "./VideoJS";
+import "./styles.css";
 
 const App = () => {
   const playerRef = useRef(null);
@@ -12,6 +13,30 @@ const App = () => {
     sources: [
       {
         src: "http://localhost:8083/stream/pattern/channel/0/hls/live/index.m3u8",
+        type: "application/x-mpegURL",
+      },
+    ],
+  };
+
+  const videoJsOptions2 = {
+    height: 400,
+    width: 600,
+    controls: true,
+    sources: [
+      {
+        src: "http://localhost:8083/stream/pattern/channel/1/hls/live/index.m3u8",
+        type: "application/x-mpegURL",
+      },
+    ],
+  };
+
+  const videoJsOptions3 = {
+    height: 400,
+    width: 600,
+    controls: true,
+    sources: [
+      {
+        src: "http://localhost:8083/stream/pattern/channel/2/hls/live/index.m3u8",
         type: "application/x-mpegURL",
       },
     ],
@@ -34,6 +59,8 @@ const App = () => {
     <div>
       Hello World!
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+      <VideoJS options={videoJsOptions2} onReady={handlePlayerReady} />
+      <VideoJS options={videoJsOptions3} onReady={handlePlayerReady} />
     </div>
   );
 };
