@@ -2,6 +2,7 @@ import styles from "./PageHome.module.css";
 import img1 from "../../assets/unblock_private_network_requests.png";
 import img2 from "../../assets/cd_to_dir.png";
 import img3 from "../../assets/running_program.png";
+import img4 from "../../assets/running_program2.png";
 import zipFile from "../../assets/RTSPtoWeb.zip";
 import { useState } from "react";
 
@@ -38,7 +39,11 @@ const PageHome = () => {
         {winOrMac === "Windows" ? (
           <div>
             <div className={styles.step}>
-              Step 4: Launch the RTSPtoWeb.exe program inside the folder
+              Step 4: Launch the RTSPtoWeb.exe program inside the folder. It
+              should look something like this:
+              <div>
+                <img src={img4} alt="none" />
+              </div>
             </div>
             <div className={styles.step}>
               Step 5: Proceed to traverse the streams on the site (Clickable
