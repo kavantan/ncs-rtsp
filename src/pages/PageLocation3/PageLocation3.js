@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
 import styles from "./PageLocation3.module.css";
 
 const pageLocation3 = () => {
-  const playerRef = useRef(null);
+  const playerRef = UseRef(null);
 
   const videoJsOptions = {
     height: 400,
