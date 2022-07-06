@@ -39,6 +39,10 @@ const PageHome = () => {
           <div className={styles.step}>
             Step 4: Launch the RTSPtoWeb.exe program inside the folder
           </div>
+          <div className={styles.step}>
+            Step 5: Proceed to traverse the streams on the site (Clickable
+            locations are on the hotbar above)
+          </div>
         </div>
       ) : (
         <div>
@@ -55,9 +59,13 @@ const PageHome = () => {
           </div>
           <div className={styles.step}>
             Step 6: Type ./RTSPtoWeb and press enter. Should look like this:
-            <div className={styles.image}>
+            <div>
               <img src={img3} alt="none" />
             </div>
+          </div>
+          <div className={styles.step}>
+            Step 7: Proceed to traverse the streams on the site (Clickable
+            locations are on the hotbar above)
           </div>
         </div>
       )}
