@@ -34,41 +34,44 @@ const PageHome = () => {
           <option value="Mac"> For Mac Users</option>
         </select>
       </div>
-      {winOrMac === "Windows" ? (
-        <div>
-          <div className={styles.step}>
-            Step 4: Launch the RTSPtoWeb.exe program inside the folder
-          </div>
-          <div className={styles.step}>
-            Step 5: Proceed to traverse the streams on the site (Clickable
-            locations are on the hotbar above)
-          </div>
-        </div>
-      ) : (
-        <div>
-          <div className={styles.step}>
-            Step 4: Launch terminal. (Press Cmd + Space on your keyboard and
-            type terminal)
-          </div>
-          <div className={styles.step}>
-            Step 5: Type cd with a space, and drag and drop the downloaded
-            folder into the terminal, and press enter. It should look like this:
-            <div>
-              <img src={img2} alt="none" />
+      <div>
+        {winOrMac === "Windows" ? (
+          <div>
+            <div className={styles.step}>
+              Step 4: Launch the RTSPtoWeb.exe program inside the folder
+            </div>
+            <div className={styles.step}>
+              Step 5: Proceed to traverse the streams on the site (Clickable
+              locations are on the hotbar above)
             </div>
           </div>
-          <div className={styles.step}>
-            Step 6: Type ./RTSPtoWeb and press enter. Should look like this:
-            <div>
-              <img src={img3} alt="none" />
+        ) : (
+          <div>
+            <div className={styles.step}>
+              Step 4: Launch terminal. (Press Cmd + Space on your keyboard and
+              type terminal)
+            </div>
+            <div className={styles.step}>
+              Step 5: Type cd with a space, and drag and drop the downloaded
+              folder into the terminal, and press enter. It should look like
+              this:
+              <div>
+                <img src={img2} alt="none" />
+              </div>
+            </div>
+            <div className={styles.step}>
+              Step 6: Type ./RTSPtoWeb and press enter. Should look like this:
+              <div>
+                <img src={img3} alt="none" />
+              </div>
+            </div>
+            <div className={styles.step}>
+              Step 7: Proceed to traverse the streams on the site (Clickable
+              locations are on the hotbar above)
             </div>
           </div>
-          <div className={styles.step}>
-            Step 7: Proceed to traverse the streams on the site (Clickable
-            locations are on the hotbar above)
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
