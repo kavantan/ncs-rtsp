@@ -12,18 +12,18 @@ const PageHome = () => {
   return (
     <div className={styles.homePage}>
       <div className={styles.step}>
-        Step 1 (If using Chrome Browser). Allow private network requests.
+        Step 1: (If using Chrome Browser). Allow private network requests.
       </div>
       <div>
-        <img src={img1} alt="none" />
+        <img className={styles.photo} src={img1} alt="none" />
       </div>
-      <div className={styles.step}>Step 2 Install the zip file below.</div>
+      <div className={styles.step}>Step 2: Install the zip file below.</div>
       <div>
         <a href={zipFile} download="RTSPtoWeb.zip">
           RTSPtoWeb.zip
         </a>
       </div>
-      <div className={styles.step}>Step 3 Unzip the zip file.</div>
+      <div className={styles.step}>Step 3: Unzip the zip file.</div>
       <div>
         <select
           value={winOrMac}
@@ -42,7 +42,7 @@ const PageHome = () => {
               Step 4: Launch the RTSPtoWeb.exe program inside the folder. It
               should look something like this:
               <div>
-                <img src={img4} alt="none" />
+                <img className={styles.photo} src={img4} alt="none" />
               </div>
             </div>
             <div className={styles.step}>
@@ -61,13 +61,13 @@ const PageHome = () => {
               folder into the terminal, and press enter. It should look like
               this:
               <div>
-                <img src={img2} alt="none" />
+                <img className={styles.photo} src={img2} alt="none" />
               </div>
             </div>
             <div className={styles.step}>
               Step 6: Type ./RTSPtoWeb and press enter. Should look like this:
               <div>
-                <img src={img3} alt="none" />
+                <img className={styles.photo} src={img3} alt="none" />
               </div>
             </div>
             <div className={styles.step}>

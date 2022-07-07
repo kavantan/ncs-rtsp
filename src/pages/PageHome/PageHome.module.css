@@ -11,3 +11,8 @@
 .step {
   font-weight: bold;
 }
+
+.photo {
+  height: 200px;
+  width: 100%;
+}
