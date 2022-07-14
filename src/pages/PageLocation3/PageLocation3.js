@@ -7,7 +7,7 @@ const pageLocation3 = () => {
   const playerRef = UseRef(null);
 
   const videoJsOptions = {
-    height: 400,
+    height: 200,
     width: 600,
     controls: true,
     sources: [
@@ -19,7 +19,7 @@ const pageLocation3 = () => {
   };
 
   const videoJsOptions2 = {
-    height: 400,
+    height: 200,
     width: 600,
     controls: true,
     sources: [
@@ -31,7 +31,7 @@ const pageLocation3 = () => {
   };
 
   const videoJsOptions3 = {
-    height: 400,
+    height: 200,
     width: 600,
     controls: true,
     sources: [

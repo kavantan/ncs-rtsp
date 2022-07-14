@@ -20,7 +20,7 @@ export default function AppShell() {
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             <NavLink className={styles.home} to="/">
-              <img className={styles.logo} src={logo} alt="NCS logo" />{" "}
+              <img src={logo} alt="NCS logo" />{" "}
             </NavLink>
           </Typography>
           <IconButton

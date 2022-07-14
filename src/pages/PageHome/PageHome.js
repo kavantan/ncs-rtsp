@@ -15,6 +15,10 @@ const PageHome = () => {
         Step 1: (If using Chrome Browser). Allow private network requests.
       </div>
       <div>
+        (Access at this URL:
+        chrome://flags/#block-insecure-private-network-requests)
+      </div>
+      <div>
         <img className={styles.photo} src={img1} alt="none" />
       </div>
       <div className={styles.step}>Step 2: Install the zip file below.</div>
