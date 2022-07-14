@@ -12,7 +12,7 @@ import styles from "./AppShell.module.css";
 export default function AppShell() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar style={{ background: "#e1ad01" }} position="static">
+      <AppBar style={{ background: "#959492" }} position="static">
         <Toolbar>
           <Typography
             variant="h6"
