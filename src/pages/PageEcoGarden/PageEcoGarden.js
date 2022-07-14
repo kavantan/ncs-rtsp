@@ -1,9 +1,9 @@
 import { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
-import styles from "./PageLocation3.module.css";
+import styles from "./PageEcoGarden.module.css";
 
-const pageLocation3 = () => {
+const PageEcoGarden = () => {
   const playerRef = UseRef(null);
 
   const videoJsOptions = {
@@ -76,4 +76,4 @@ const pageLocation3 = () => {
   );
 };
 
-export default pageLocation3;
+export default PageEcoGarden;

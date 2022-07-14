@@ -6,12 +6,13 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/ncslogo.png";
+import thingsofai from "../../assets/thingsofai.png";
 import styles from "./AppShell.module.css";
 
 export default function AppShell() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar style={{ background: "#e1ad01" }} position="static">
         <Toolbar>
           <Typography
             variant="h6"
@@ -23,45 +24,64 @@ export default function AppShell() {
               <img src={logo} alt="NCS logo" />{" "}
             </NavLink>
           </Typography>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <NavLink to="/location1" className={styles.button}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Location1
-              </Typography>
-            </NavLink>
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <NavLink to="/location2" className={styles.button}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Location2
-              </Typography>
-            </NavLink>
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <NavLink to="/location3" className={styles.button}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Location3
-              </Typography>
-            </NavLink>
-          </IconButton>
+          <Box sx={{ flexGrow: 2 }} />
+          <Box sx={{ flexGrow: 1 }}>
+            <img src={thingsofai} alt="NCS logo" />
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <NavLink to="/driveway" className={styles.button}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Driveway
+                </Typography>
+              </NavLink>
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <NavLink to="/ecogarden" className={styles.button}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Eco-Garden
+                </Typography>
+              </NavLink>
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <NavLink to="/reception" className={styles.button}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Reception
+                </Typography>
+              </NavLink>
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <NavLink to="/bistro" className={styles.button}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Bistro
+                </Typography>
+              </NavLink>
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

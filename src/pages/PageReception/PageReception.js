@@ -1,9 +1,9 @@
 import { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
-import styles from "./PageLocation2.module.css";
+import styles from "./PageReception.module.css";
 
-const pageLocation2 = () => {
+const PageReception = () => {
   const playerRef = UseRef(null);
 
   const videoJsOptions = {
@@ -76,4 +76,4 @@ const pageLocation2 = () => {
   );
 };
 
-export default pageLocation2;
+export default PageReception;

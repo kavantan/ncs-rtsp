@@ -1,9 +1,9 @@
 import { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
-import styles from "./PageLocation1.module.css";
+import styles from "./PageDriveway.module.css";
 
-const pageLocation1 = () => {
+const PageDriveway = () => {
   const playerRef = UseRef(null);
 
   const videoJsOptions = {
@@ -76,4 +76,4 @@ const pageLocation1 = () => {
   );
 };
 
-export default pageLocation1;
+export default PageDriveway;
