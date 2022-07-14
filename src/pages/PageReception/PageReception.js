@@ -2,45 +2,10 @@ import { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
 import styles from "./PageReception.module.css";
+import { videoJsOptions, videoJsOptions1 } from "./reception.streams.js";
 
 const PageReception = () => {
   const playerRef = UseRef(null);
-
-  const videoJsOptions = {
-    height: 200,
-    width: 600,
-    controls: true,
-    sources: [
-      {
-        src: "http://localhost:8083/stream/pattern/channel/0/hls/live/index.m3u8",
-        type: "application/x-mpegURL",
-      },
-    ],
-  };
-
-  const videoJsOptions2 = {
-    height: 200,
-    width: 600,
-    controls: true,
-    sources: [
-      {
-        src: "http://localhost:8083/stream/pattern/channel/1/hls/live/index.m3u8",
-        type: "application/x-mpegURL",
-      },
-    ],
-  };
-
-  const videoJsOptions3 = {
-    height: 200,
-    width: 600,
-    controls: true,
-    sources: [
-      {
-        src: "http://localhost:8083/stream/pattern/channel/2/hls/live/index.m3u8",
-        type: "application/x-mpegURL",
-      },
-    ],
-  };
 
   const handlePlayerReady = (player) => {
     playerRef.current = player;
@@ -59,18 +24,18 @@ const PageReception = () => {
     <div>
       <div className={styles.main}>
         <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions2} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions3} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+      </div>
+      <div className={styles.main}>
+        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
       </div>
       <div className={styles.main}>
         <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions2} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions3} onReady={handlePlayerReady} />
-      </div>
-      <div className={styles.main}>
+        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
         <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions2} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions3} onReady={handlePlayerReady} />
       </div>
     </div>
   );
