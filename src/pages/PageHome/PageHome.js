@@ -4,7 +4,7 @@ import img2 from "../../assets/cd_to_dir.png";
 import img3 from "../../assets/running_program.png";
 import img4 from "../../assets/running_program2.png";
 import zipFile from "../../assets/RTSPtoWeb.zip";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const PageHome = () => {
   const [winOrMac, setWinOrMac] = useState("Windows");

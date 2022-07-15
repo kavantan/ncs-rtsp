@@ -1,4 +1,4 @@
-import { useRef as UseRef } from "react";
+import React, { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
 import styles from "./PageDriveway.module.css";

@@ -1,3 +1,4 @@
+import React from "react";
 import PageDriveway from "./pages/PageDriveway";
 import PageEcoGarden from "./pages/PageEcoGarden";
 import PageReception from "./pages/PageReception";
@@ -17,7 +18,7 @@ function App() {
         <Route path="/ecogarden" element={<PageEcoGarden />} />
         <Route path="/reception" element={<PageReception />} />
         <Route path="/bistro" element={<PageBistro />} />
-        <Route path="/edgecam" element={<PageBistro />} />
+        <Route path="/edgecam" element={<PageEdgeCam />} />
       </Routes>
     </div>
   );

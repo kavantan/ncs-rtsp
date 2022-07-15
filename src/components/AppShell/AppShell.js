@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/ncslogo.png";
 import thingsofai from "../../assets/thingsofai.png";
 import styles from "./AppShell.module.css";
-import { StyleSharp } from "@mui/icons-material";
 
 export default function AppShell() {
   return (
@@ -16,11 +15,13 @@ export default function AppShell() {
       <AppBar style={{ background: "#959492" }} position="static">
         <Toolbar>
           <Box>
-            <img
-              className={styles.thingsOfAi}
-              src={thingsofai}
-              alt="NCS logo"
-            />
+            <NavLink className={styles.home} to="/">
+              <img
+                className={styles.thingsOfAi}
+                src={thingsofai}
+                alt="NCS logo"
+              />
+            </NavLink>
           </Box>
           <Box sx={{ flexGrow: 1 }}>
             <div className={styles.title}>
