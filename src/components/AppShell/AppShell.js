@@ -15,17 +15,14 @@ export default function AppShell() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar style={{ background: "#959492" }} position="static">
         <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            <NavLink className={styles.home} to="/">
-              <img className={styles.logo} src={logo} alt="NCS logo" />
-            </NavLink>
-          </Typography>
-          <Box sx={{ flexGrow: 4 }}>
+          <Box>
+            <img
+              className={styles.thingsOfAi}
+              src={thingsofai}
+              alt="NCS logo"
+            />
+          </Box>
+          <Box sx={{ flexGrow: 1 }}>
             <div className={styles.title}>
               NCS A1 Digital Twin | Live Video Monitoring
             </div>
@@ -98,13 +95,16 @@ export default function AppShell() {
             </IconButton>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box>
-            <img
-              className={styles.thingsOfAi}
-              src={thingsofai}
-              alt="NCS logo"
-            />
-          </Box>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block" } }}
+          >
+            <NavLink className={styles.home} to="/">
+              <img className={styles.logo} src={logo} alt="NCS logo" />
+            </NavLink>
+          </Typography>
         </Toolbar>
       </AppBar>
     </Box>
