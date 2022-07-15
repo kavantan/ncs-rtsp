@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/ncslogo.png";
 import thingsofai from "../../assets/thingsofai.png";
 import styles from "./AppShell.module.css";
+import { StyleSharp } from "@mui/icons-material";
 
 export default function AppShell() {
   return (
@@ -21,16 +22,17 @@ export default function AppShell() {
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             <NavLink className={styles.home} to="/">
-              <img src={logo} alt="NCS logo" />{" "}
+              <img className={styles.logo} src={logo} alt="NCS logo" />
             </NavLink>
           </Typography>
-          <Box sx={{ flexGrow: 2 }} />
-          <Box sx={{ flexGrow: 1 }}>
-            <img src={thingsofai} alt="NCS logo" />
+          <Box sx={{ flexGrow: 4 }}>
+            <div className={styles.title}>
+              NCS A1 Digital Twin | Live Video Monitoring
+            </div>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
-              size="large"
+              size="medium"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -43,7 +45,7 @@ export default function AppShell() {
               </NavLink>
             </IconButton>
             <IconButton
-              size="large"
+              size="medium"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -56,7 +58,7 @@ export default function AppShell() {
               </NavLink>
             </IconButton>
             <IconButton
-              size="large"
+              size="medium"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -69,7 +71,7 @@ export default function AppShell() {
               </NavLink>
             </IconButton>
             <IconButton
-              size="large"
+              size="medium"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -81,6 +83,27 @@ export default function AppShell() {
                 </Typography>
               </NavLink>
             </IconButton>
+            <IconButton
+              size="medium"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <NavLink to="/edgecam" className={styles.button}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Edge Cam
+                </Typography>
+              </NavLink>
+            </IconButton>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box>
+            <img
+              className={styles.thingsOfAi}
+              src={thingsofai}
+              alt="NCS logo"
+            />
           </Box>
         </Toolbar>
       </AppBar>
