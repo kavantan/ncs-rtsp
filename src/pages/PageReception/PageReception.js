@@ -2,7 +2,17 @@ import React, { useRef as UseRef } from "react";
 import videojs from "video.js";
 import VideoJS from "../../VideoJS";
 import styles from "./PageReception.module.css";
-import { videoJsOptions, videoJsOptions1 } from "./reception.streams.js";
+import {
+  videoJsOptions1,
+  videoJsOptions2,
+  videoJsOptions3,
+  videoJsOptions4,
+  videoJsOptions5,
+  videoJsOptions6,
+  videoJsOptions7,
+  videoJsOptions8,
+  videoJsOptions9,
+} from "./reception.streams.js";
 
 const PageReception = () => {
   const playerRef = UseRef(null);
@@ -23,19 +33,19 @@ const PageReception = () => {
   return (
     <div>
       <div className={styles.main}>
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions2} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions3} onReady={handlePlayerReady} />
       </div>
       <div className={styles.main}>
-        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions4} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions5} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions6} onReady={handlePlayerReady} />
       </div>
       <div className={styles.main}>
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions1} onReady={handlePlayerReady} />
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions7} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions8} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions9} onReady={handlePlayerReady} />
       </div>
     </div>
   );
